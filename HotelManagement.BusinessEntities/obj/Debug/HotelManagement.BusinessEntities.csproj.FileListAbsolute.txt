@@ -1,0 +1,6 @@
+C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.BusinessEntities\bin\Debug\HotelManagement.BusinessEntities.dll
+C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.BusinessEntities\bin\Debug\HotelManagement.BusinessEntities.pdb
+C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.BusinessEntities\obj\Debug\HotelManagement.BusinessEntities.dll
+C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.BusinessEntities\obj\Debug\HotelManagement.BusinessEntities.pdb
+C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.BusinessEntities\obj\Debug\HotelManagement.BusinessEntities.csprojAssemblyReference.cache
+C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.BusinessEntities\obj\Debug\HotelManagement.BusinessEntities.csproj.CoreCompileInputs.cache
