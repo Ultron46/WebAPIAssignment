@@ -1,15 +1,13 @@
 ﻿using HotelManagement.Business.Interfaces;
 using HotelManagement.BusinessEntities.ViewModels;
 using HotelManagement.WebAPI.Authentication;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace HotelManagement.WebAPI.Controllers
 {
+    [RoutePrefix("api/Hotel")]
+    [BasicAuth]
     public class HotelsController : ApiController
     {
         private IHotelManager _hotelManager;
@@ -17,27 +15,27 @@ namespace HotelManagement.WebAPI.Controllers
         {
             _hotelManager = hotelManager;
         }
-
-        [BasicAuth, HttpGet]
+        [Route("Hotels")]
+        [HttpGet]
         public IHttpActionResult GetHotels()
         {
             List<HotelViewModel> hotels = _hotelManager.GetHotels();
             if(hotels == null)
             {
-                return NotFound();
+                return Json(new { error = true, message = "No Hotel Records Found or Something Went Wrong"});
             }
-            return Ok(hotels);
+            return Json(new { success = true, hotels});
         }
-
+        [Route("AddHotel")]
         [HttpPost]
         public IHttpActionResult InsertHotel(HotelViewModel hotel)
         {
             bool status = _hotelManager.InsertHotel(hotel);
             if(status == false)
             {
-                return NotFound();
+                return Json(new { error = true, message = "Could not insert hotel details" });
             }
-            return Ok(status);
+            return Json(new { success = true, message = "Hotel details inserted successfully"});
         }
     }
 }

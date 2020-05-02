@@ -3,7 +3,6 @@ C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\HotelManagement.Business.pdb
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\AutoMapper.dll
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\EntityFramework.dll
-C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\HotelManagement.BusinessEntities.dll
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\HotelManagement.Common.dll
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\HotelManagement.Data.dll
@@ -21,7 +20,6 @@ C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\AutoMapper.pdb
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\AutoMapper.xml
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\EntityFramework.xml
-C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Hardik\source\repos\HotelManagement\HotelManagement.Business\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

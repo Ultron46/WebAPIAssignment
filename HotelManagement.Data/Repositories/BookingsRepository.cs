@@ -1,30 +1,39 @@
-﻿using HotelManagement.Data.Database;
+﻿using AutoMapper;
+using HotelManagement.BusinessEntities.ViewModels;
+using HotelManagement.Data.Database;
 using HotelManagement.Data.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelManagement.Data.Repositories
 {
     public class BookingsRepository : IBookingsRepository
     {
-        public bool BookRoom(int roomId, DateTime date)
+        public bool BookRoom(BookingViewModel booking)
         {
             using (HotelManagementEntities db = new HotelManagementEntities())
             {
                 bool status = false;
                 try
                 {
-                    Booking temp = db.Bookings.Where(x => x.RoomID == roomId && x.Booking_Date == date).FirstOrDefault();
+                    Booking temp = db.Bookings.Where(x => x.RoomID == booking.RoomID && x.Booking_Date == booking.Booking_Date).FirstOrDefault();
                     if(temp != null)
                     {
                         return status;
                     }
-                    Booking booking = new Booking { RoomID = roomId, Booking_Date = date, Status = "optional" };
-                    db.Bookings.Add(booking);
+                    if (string.IsNullOrEmpty(booking.Status))
+                    {
+                        booking.Status = "Optional";
+                    }
+                    var config = new MapperConfiguration(cfg =>
+                    {
+                        cfg.CreateMap<BookingViewModel, Booking>();
+                    });
+                    IMapper mapper = config.CreateMapper();
+                    var Book = mapper.Map<BookingViewModel, Booking>(booking);
+                    db.Bookings.Add(Book);
                     if(db.SaveChanges() > 0)
                     {
                         status = true;
@@ -85,19 +94,19 @@ namespace HotelManagement.Data.Repositories
             }
         }
 
-        public bool UpdateBookingDate(int roomId, DateTime date)
+        public bool UpdateBookingDate(int bookingId, DateTime date)
         {
             using (HotelManagementEntities db = new HotelManagementEntities())
             {
                 bool status = false;
                 try
                 {
-                    Booking temp = db.Bookings.Where(x => x.RoomID == roomId && x.Booking_Date == date).FirstOrDefault();
+                    Booking temp = db.Bookings.Where(x => x.RoomID == bookingId && x.Booking_Date == date).FirstOrDefault();
                     if(temp != null)
                     {
                         return status;
                     }
-                    Booking booking = db.Bookings.Where(x => x.RoomID == roomId).FirstOrDefault();
+                    Booking booking = db.Bookings.Where(x => x.RoomID == bookingId).FirstOrDefault();
                     booking.Booking_Date = date; ;
                     if(db.SaveChanges() > 0)
                     {

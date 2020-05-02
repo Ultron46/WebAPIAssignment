@@ -1,10 +1,7 @@
 ﻿using HotelManagement.Business.Interfaces;
+using HotelManagement.BusinessEntities.ViewModels;
 using HotelManagement.Data.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelManagement.Business.Managers
 {
@@ -15,9 +12,9 @@ namespace HotelManagement.Business.Managers
         {
             _bookingsRepository = bookingsRepository;
         }
-        public bool BookRoom(int roomId, DateTime date)
+        public bool BookRoom(BookingViewModel booking)
         {
-            bool status = _bookingsRepository.BookRoom(roomId, date);
+            bool status = _bookingsRepository.BookRoom(booking);
             return status;
         }
 
@@ -33,9 +30,9 @@ namespace HotelManagement.Business.Managers
             return status;
         }
 
-        public bool UpdateBookingDate(int roomId, DateTime date)
+        public bool UpdateBookingDate(int bookingId, DateTime date)
         {
-            bool status = _bookingsRepository.UpdateBookingDate(roomId, date);
+            bool status = _bookingsRepository.UpdateBookingDate(bookingId, date);
             return status;
         }
 
