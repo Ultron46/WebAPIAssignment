@@ -1,7 +1,9 @@
 ﻿using HotelManagement.Business.Interfaces;
 using HotelManagement.BusinessEntities.ViewModels;
 using HotelManagement.WebAPI.Authentication;
+using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Web.Http;
 
 namespace HotelManagement.WebAPI.Controllers
@@ -17,25 +19,44 @@ namespace HotelManagement.WebAPI.Controllers
         }
         [Route("Rooms")]
         [HttpGet]
-        public IHttpActionResult GetRooms(string hotel, string city, string pincode, double? price, string category)
+        public IHttpActionResult GetRooms(string city = null, string pincode = null, string category = null, double? hotelId = null, double? price = null)
         {
-            List<RoomViewModel> rooms = _roomManager.GetRooms(hotel, city, pincode, price, category);
-            if(rooms == null)
+            int? hid;
+            if(hotelId == null)
             {
-                return Json(new { error = true, message = "No Records Found or Something Went Wrong" });
+                hid = null;
             }
-            return Json(new { success = true, rooms});
+            else
+            {
+                hid = Convert.ToInt32(hotelId);
+            }
+            try
+            {
+                List<RoomViewModel> rooms = _roomManager.GetRooms(hid, city, pincode, price, category);
+                if (rooms.Count == 0 || rooms == null)
+                {
+                    return Json("No Records Found");
+                }
+                return Json(rooms);
+            }
+            catch(Exception e)
+            {
+                return Content(HttpStatusCode.InternalServerError, new { message = e.Message });
+            }
         }
         [Route("AddRoom")]
         [HttpPost]
         public IHttpActionResult InsertRoom(RoomViewModel room)
         {
-            bool status = _roomManager.InsertRoom(room);
-            if (status == false)
+            try
             {
-                return Json(new { error = true, message = "Could not insert room details" });
+                bool status = _roomManager.InsertRoom(room);
+                return Content(HttpStatusCode.Created, new { message = "Room details inserted successfully" });
             }
-            return Json(new { success = true, message = "Room details inserted successfully" });
+            catch(Exception e)
+            {
+                return Content(HttpStatusCode.InternalServerError, new { message = e.Message });
+            }
         }
     }
 }

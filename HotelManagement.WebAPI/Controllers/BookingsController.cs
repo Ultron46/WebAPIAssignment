@@ -2,6 +2,7 @@
 using HotelManagement.BusinessEntities.ViewModels;
 using HotelManagement.WebAPI.Authentication;
 using System;
+using System.Net;
 using System.Web.Http;
 
 namespace HotelManagement.WebAPI.Controllers
@@ -15,57 +16,81 @@ namespace HotelManagement.WebAPI.Controllers
         {
             _bookingManager = bookingManager;
         }
+
         [Route("GetAvailibility")]
         [HttpGet]
         public IHttpActionResult GetRoomAvailibility(int roomId, string date)
         {
             DateTime dateTime = Convert.ToDateTime(date);
-            bool status = _bookingManager.GetRoomAvailability(roomId, dateTime);
-            return Json(status);
+            try
+            {
+                bool status = _bookingManager.GetRoomAvailability(roomId, dateTime);
+                return Json(status);
+            }
+            catch(Exception e)
+            {
+                return Content(HttpStatusCode.InternalServerError, new { message = e.Message });
+            }
         }
+
         [Route("Book")]
         [HttpPost]
         public IHttpActionResult BookRoom(BookingViewModel booking)
         {
-            bool status = _bookingManager.BookRoom(booking);
-            if (status == false)
+            try
             {
-                return Json(new { error = true, message = "Could not book the room, something went wrong" });
+                bool status = _bookingManager.BookRoom(booking);
+                return Json(new { message = "Room booked for date " + booking.Booking_Date});
             }
-            return Json(new { success = true, message = "Room booked for date " + booking.Booking_Date});
+            catch (Exception e)
+            {
+                return Content(HttpStatusCode.InternalServerError, new { message = e.Message });
+            }
         }
+
         [Route("UpdateBooking")]
         [HttpPut]
         public IHttpActionResult UpdateBookingDate(BookingViewModel booking)
         {
-            bool status = _bookingManager.UpdateBookingDate(booking.RoomID, booking.Booking_Date);
-            if (status == false)
+            try
             {
-                return Json(new { error = true, message = "Could not update booking date, something went wrong" });
+                bool status = _bookingManager.UpdateBookingDate(booking.ID, booking.Booking_Date);
+                return Json(new { message = "Booking date updated successfully" });
             }
-            return Json(new { success = true, message = "Booking date updated successfully" });
+            catch (Exception e)
+            {
+                return Content(HttpStatusCode.InternalServerError, new { message = e.Message });
+            }
         }
+
         [Route("UpdateStatus")]
         [HttpPut]
         public IHttpActionResult UpdateBookingStatus(BookingViewModel booking)
         {
-            bool updated = _bookingManager.UpdateBookingStatus(booking.ID, booking.Status);
-            if (updated == false)
+            try
             {
-                return Json(new { error = true, message = "Could not update booking status, something went wrong" });
+                bool updated = _bookingManager.UpdateBookingStatus(booking.ID, booking.Status);
+                return Json(new { message = "Booking status updated successfully" });
             }
-            return Json(new { success = true, message = "Booking status updated successfully" });
+            catch (Exception e)
+            {
+                return Content(HttpStatusCode.InternalServerError, new { message = e.Message });
+            }
         }
-        [Route("Delete")]
+
+        [Route("Delete/{id}")]
         [HttpDelete]
         public IHttpActionResult DeleteBooking(int id)
         {
-            bool status = _bookingManager.DeleteBooking(id);
-            if (status == false)
+            try
             {
-                return Json(new { error = true, message = "Could not delete booking details, something went wrong" });
+                bool status = _bookingManager.DeleteBooking(id);
+                return Json(new { message = "Booking details deleted successfully" });
             }
-            return Json(new { success = true, message = "Booking details deleted successfully" });
+            catch (Exception e)
+            {
+                return Content(HttpStatusCode.InternalServerError, new { message = e.Message });
+            }
         }
     }
 }

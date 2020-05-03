@@ -9,7 +9,7 @@ namespace HotelManagement.Business.Interfaces
 {
     public interface IRoomManager
     {
-        List<RoomViewModel> GetRooms(string hotel, string city, string pincode, Nullable<double> price, string category);
+        List<RoomViewModel> GetRooms(int? hotel, string city, string pincode, double? price, string category);
         bool InsertRoom(RoomViewModel room);
     }
 }

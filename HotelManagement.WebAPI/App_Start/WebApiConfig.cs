@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Http.Cors;
 
 namespace HotelManagement.WebAPI
@@ -11,11 +8,10 @@ namespace HotelManagement.WebAPI
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
-            // Web API routes
             EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
             config.Formatters.Remove(config.Formatters.XmlFormatter);
+            // Web API routes
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

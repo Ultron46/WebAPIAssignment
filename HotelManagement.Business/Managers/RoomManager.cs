@@ -13,9 +13,9 @@ namespace HotelManagement.Business.Managers
         {
             _roomRepository = roomRepository;
         }
-        public List<RoomViewModel> GetRooms(string hotel, string city, string pincode, Nullable<double> price, string category)
+        public List<RoomViewModel> GetRooms(int? hotelId, string city, string pincode, double? price, string category)
         {
-            List<RoomViewModel> rooms = _roomRepository.GetRooms(hotel, city, pincode, price, category);
+            List<RoomViewModel> rooms = _roomRepository.GetRooms(hotelId, city, pincode, price, category);
             return rooms;
         }
 

@@ -11,66 +11,65 @@ namespace HotelManagement.Data.Repositories
 {
     public class RoomRepository : IRoomRepository
     {
-        public List<RoomViewModel> GetRooms(string hotel, string city, string pincode, Nullable<double> price, string category)
+        public List<RoomViewModel> GetRooms(int? hotelId, string city, string pincode, double? price, string category)
         {
             List<Room> rooms = new List<Room>();
             using (HotelManagementEntities db = new HotelManagementEntities())
             {
-                try
+                var query = from r in db.Rooms select r;
+                if(hotelId != null)
                 {
-                    var query = (from r in db.Rooms where (hotel == null || r.Hotel.Name == hotel) && (city == null || r.Hotel.City == city) && (pincode == null || r.Hotel.Pin_Code == pincode) && (price == null || r.Price == price) && (category == null || r.Category1.Name == category) select r).OrderBy(x => x.Price).Include(x => x.Category1).Include(x => x.Hotel);
-                    rooms = query.ToList();
-                    var config = new MapperConfiguration(cfg =>
-                    {
-                        cfg.CreateMap<Room, RoomViewModel>().ForMember(d => d.Hotel, o => o.MapFrom(s => s.Hotel)).ForMember(d => d.Category1, o => o.MapFrom(s => s.Category1));
-                        cfg.CreateMap<Hotel, HotelViewModel>();
-                        cfg.CreateMap<Category, CategoryViewModel>();
-                    });
-
-                    IMapper mapper = config.CreateMapper();
-                    List<RoomViewModel> roomViewModels = new List<RoomViewModel>();
-                    foreach (Room room in rooms)
-                    {
-                        var Room = mapper.Map<Room, RoomViewModel>(room);
-                        roomViewModels.Add(Room);
-                    }
-                    return roomViewModels;
+                    query = query.Where(x => x.HotelID == hotelId);
                 }
-                catch (Exception e)
+                if (!string.IsNullOrEmpty(city))
                 {
-                    Console.WriteLine(e.Message);
-                    return new List<RoomViewModel>();
+                    query = query.Where(x => x.Hotel.City == city);
                 }
+                if (!string.IsNullOrEmpty(pincode))
+                {
+                    query = query.Where(x => x.Hotel.Pin_Code == pincode);
+                }
+                if (!string.IsNullOrEmpty(category))
+                {
+                    query = query.Where(x => x.Category1.Name == category);
+                }
+                if (price != null)
+                {
+                    query = query.Where(x => x.Price == price);
+                }
+                query = query.Include(x => x.Hotel).Include(x => x.Category1).OrderBy(x => x.Price);
+                rooms = query.ToList();
             }
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Room, RoomViewModel>().ForMember(d => d.Hotel, o => o.MapFrom(s => s.Hotel)).ForMember(d => d.Category1, o => o.MapFrom(s => s.Category1));
+                cfg.CreateMap<Hotel, HotelViewModel>();
+                cfg.CreateMap<Category, CategoryViewModel>();
+            });
+            IMapper mapper = config.CreateMapper();
+            List<RoomViewModel> roomViewModels = mapper.Map<List<Room>, List<RoomViewModel>>(rooms);
+            return roomViewModels;
         }
 
         public bool InsertRoom(RoomViewModel room)
         {
-            try
+            var config = new MapperConfiguration(cfg =>
             {
-                bool status = false;
-                var config = new MapperConfiguration(cfg =>
+                cfg.CreateMap<RoomViewModel, Room>();
+            });
+            IMapper mapper = config.CreateMapper();
+            var Room = mapper.Map<RoomViewModel, Room>(room);
+            bool status = false;
+            using (HotelManagementEntities db = new HotelManagementEntities())
+            {
+                Room.Created_Date = DateTime.Now;
+                db.Rooms.Add(Room);
+                if (db.SaveChanges() > 0)
                 {
-                    cfg.CreateMap<RoomViewModel, Room>();
-                });
-                IMapper mapper = config.CreateMapper();
-                var Room = mapper.Map<RoomViewModel, Room>(room);
-                using (HotelManagementEntities db = new HotelManagementEntities())
-                {
-                    Room.Created_Date = DateTime.Now;
-                    db.Rooms.Add(Room);
-                    if (db.SaveChanges() > 0)
-                    {
-                        status = true;
-                    }
+                    status = true;
                 }
-                return status;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+            return status;
         }
     }
 }

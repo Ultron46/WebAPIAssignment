@@ -1,0 +1,3308 @@
+{
+	"info": {
+		"_postman_id": "da88ccfe-9670-4502-b3b9-26edcad40164",
+		"name": "Web API Assignments ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hotels List",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/api/Hotel/Hotels",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Hotel",
+						"Hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Hotel",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Taj\",\n    \"Address\": \"NH 8\",\n    \"City\": \"Vadodara\",\n    \"Pin_Code\": \"123456\",\n    \"Contact_Number\": \"9874563210\",\n    \"Contact_Person\": \"Hardik\",\n    \"Website\": \"https://www.Dev.com\",\n    \"Facebook\": \"https://www.facebook.com/Dev\",\n    \"Twitter\": \"https://www.twitter.com/Dev\",\n    \"IsActive\": true,\n    \"Created_Date\": \"2020-04-30T00:00:00\",\n    \"Created_By\": \"Hardik\",\n    \"Updated_Date\": null,\n    \"Updated_By\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Hotel/AddHotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Hotel",
+						"AddHotel"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Hotel",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Dev\",\n    \"Address\": \"NH 8\",\n    \"City\": \"Vadodara\",\n    \"Pin_Code\": \"123456\",\n    \"Contact_Number\": \"9874563210\",\n    \"Contact_Person\": \"Hardik\",\n    \"Website\": \"https://www.Dev.com\",\n    \"Facebook\": \"https://www.facebook.com/Dev\",\n    \"Twitter\": \"https://www.twitter.com/Dev\",\n    \"IsActive\": true,\n    \"Created_Date\": \"2020-04-30T00:00:00\",\n    \"Created_By\": \"Hardik\",\n    \"Updated_Date\": null,\n    \"Updated_By\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Hotel/AddHotel",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Hotel",
+								"AddHotel"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcSG90ZWxcQWRkSG90ZWw=?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:11:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Hotel details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Hotel 1",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Dev\",\n    \"Address\": \"NH 8\",\n    \"City\": \"Vadodara\",\n    \"Pin_Code\": \"321456\",\n    \"Contact_Number\": \"9874563210\",\n    \"Contact_Person\": \"Hardik\",\n    \"Website\": \"https://www.Dev.com\",\n    \"Facebook\": \"https://www.facebook.com/Dev\",\n    \"Twitter\": \"https://www.twitter.com/Dev\",\n    \"IsActive\": true,\n    \"Created_Date\": \"2020-04-30T00:00:00\",\n    \"Created_By\": \"Hardik\",\n    \"Updated_Date\": null,\n    \"Updated_By\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Hotel/AddHotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Hotel",
+						"AddHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Hotel 2",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Paradise\",\n    \"Address\": \"NH 8\",\n    \"City\": \"Goa\",\n    \"Pin_Code\": \"365412\",\n    \"Contact_Number\": \"9874563210\",\n    \"Contact_Person\": \"Hardik\",\n    \"Website\": \"https://www.Dev.com\",\n    \"Facebook\": \"https://www.facebook.com/Dev\",\n    \"Twitter\": \"https://www.twitter.com/Dev\",\n    \"IsActive\": true,\n    \"Created_Date\": \"2020-04-30T00:00:00\",\n    \"Created_By\": \"Hardik\",\n    \"Updated_Date\": null,\n    \"Updated_By\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Hotel/AddHotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Hotel",
+						"AddHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Hotel 3",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Blue\",\n    \"Address\": \"NH 8\",\n    \"City\": \"Delhi\",\n    \"Pin_Code\": \"300855\",\n    \"Contact_Number\": \"9874563210\",\n    \"Contact_Person\": \"Hardik\",\n    \"Website\": \"https://www.Dev.com\",\n    \"Facebook\": \"https://www.facebook.com/Dev\",\n    \"Twitter\": \"https://www.twitter.com/Dev\",\n    \"IsActive\": true,\n    \"Created_Date\": \"2020-04-30T00:00:00\",\n    \"Created_By\": \"Hardik\",\n    \"Updated_Date\": null,\n    \"Updated_By\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Hotel/AddHotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Hotel",
+						"AddHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Hotel 4",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Greenland\",\n    \"Address\": \"NH 8\",\n    \"City\": \"Delhi\",\n    \"Pin_Code\": \"300855\",\n    \"Contact_Number\": \"9874563210\",\n    \"Contact_Person\": \"Hardik\",\n    \"Website\": \"https://www.Dev.com\",\n    \"Facebook\": \"https://www.facebook.com/Dev\",\n    \"Twitter\": \"https://www.twitter.com/Dev\",\n    \"IsActive\": true,\n    \"Created_Date\": \"2020-04-30T00:00:00\",\n    \"Created_By\": \"Hardik\",\n    \"Updated_Date\": null,\n    \"Updated_By\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Hotel/AddHotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Hotel",
+						"AddHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rooms with optional parameters",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/api/Room/Rooms?price=4500&city=Vadodara",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"Rooms"
+					],
+					"query": [
+						{
+							"key": "pincode",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "hotelId",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "4500"
+						},
+						{
+							"key": "city",
+							"value": "Vadodara"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Rooms with optional parameters",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44396/api/Room/Rooms",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"Rooms"
+							],
+							"query": [
+								{
+									"key": "pincode",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "hotelId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "4500",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Vadodara",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8642"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxSb29tcw==?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:42:30 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 5,\n        \"HotelID\": 1,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 10,\n        \"HotelID\": 2,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 11,\n        \"HotelID\": 3,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 16,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 17,\n        \"HotelID\": 5,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 5,\n            \"Name\": \"Paradise\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Goa\",\n            \"Pin_Code\": \"365412\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 18,\n        \"HotelID\": 5,\n        \"Name\": \"Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 5,\n            \"Name\": \"Paradise\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Goa\",\n            \"Pin_Code\": \"365412\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 9,\n        \"HotelID\": 2,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 15,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 12,\n        \"HotelID\": 3,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 6,\n        \"HotelID\": 1,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 7,\n        \"HotelID\": 1,\n        \"Name\": \"Prime Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 8,\n        \"HotelID\": 2,\n        \"Name\": \"Prime Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 13,\n        \"HotelID\": 3,\n        \"Name\": \"Super Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 14,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Rooms with optional parameter price",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/api/Room/Rooms?price=1500",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"Rooms"
+					],
+					"query": [
+						{
+							"key": "pincode",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "hotelId",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "1500"
+						},
+						{
+							"key": "city",
+							"value": "Vadodara",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Rooms with optional parameters",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44396/api/Room/Rooms",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"Rooms"
+							],
+							"query": [
+								{
+									"key": "pincode",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "hotelId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "4500",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Vadodara",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8642"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxSb29tcw==?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:42:30 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 5,\n        \"HotelID\": 1,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 10,\n        \"HotelID\": 2,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 11,\n        \"HotelID\": 3,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 16,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 17,\n        \"HotelID\": 5,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 5,\n            \"Name\": \"Paradise\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Goa\",\n            \"Pin_Code\": \"365412\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 18,\n        \"HotelID\": 5,\n        \"Name\": \"Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 5,\n            \"Name\": \"Paradise\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Goa\",\n            \"Pin_Code\": \"365412\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 9,\n        \"HotelID\": 2,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 15,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 12,\n        \"HotelID\": 3,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 6,\n        \"HotelID\": 1,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 7,\n        \"HotelID\": 1,\n        \"Name\": \"Prime Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 8,\n        \"HotelID\": 2,\n        \"Name\": \"Prime Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 13,\n        \"HotelID\": 3,\n        \"Name\": \"Super Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 14,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Rooms with optional parameter price and city",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/api/Room/Rooms?price=2500&city=Mumbai",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"Rooms"
+					],
+					"query": [
+						{
+							"key": "pincode",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "hotelId",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "2500"
+						},
+						{
+							"key": "city",
+							"value": "Mumbai"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Rooms with optional parameters",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44396/api/Room/Rooms",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"Rooms"
+							],
+							"query": [
+								{
+									"key": "pincode",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "hotelId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "4500",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Vadodara",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8642"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxSb29tcw==?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:42:30 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 5,\n        \"HotelID\": 1,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 10,\n        \"HotelID\": 2,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 11,\n        \"HotelID\": 3,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 16,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 17,\n        \"HotelID\": 5,\n        \"Name\": \"Delux\",\n        \"Category\": 1,\n        \"Price\": 1500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 5,\n            \"Name\": \"Paradise\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Goa\",\n            \"Pin_Code\": \"365412\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 1,\n            \"Name\": \"Categories 1\",\n            \"Details\": \"size <35 m2\"\n        }\n    },\n    {\n        \"ID\": 18,\n        \"HotelID\": 5,\n        \"Name\": \"Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 5,\n            \"Name\": \"Paradise\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Goa\",\n            \"Pin_Code\": \"365412\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 9,\n        \"HotelID\": 2,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 15,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 12,\n        \"HotelID\": 3,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 6,\n        \"HotelID\": 1,\n        \"Name\": \"Super Delux\",\n        \"Category\": 2,\n        \"Price\": 2500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 2,\n            \"Name\": \"Categories 2\",\n            \"Details\": \"size 36-50 m2\"\n        }\n    },\n    {\n        \"ID\": 7,\n        \"HotelID\": 1,\n        \"Name\": \"Prime Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 1,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"123456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 8,\n        \"HotelID\": 2,\n        \"Name\": \"Prime Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 2,\n            \"Name\": \"Taj\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 13,\n        \"HotelID\": 3,\n        \"Name\": \"Super Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 3,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Mumbai\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    },\n    {\n        \"ID\": 14,\n        \"HotelID\": 4,\n        \"Name\": \"Super Delux\",\n        \"Category\": 3,\n        \"Price\": 3500,\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null,\n        \"Hotel\": {\n            \"ID\": 4,\n            \"Name\": \"Dev\",\n            \"Address\": \"NH 8\",\n            \"City\": \"Vadodara\",\n            \"Pin_Code\": \"321456\",\n            \"Contact_Number\": \"9874563210\",\n            \"Contact_Person\": \"Hardik\",\n            \"Website\": \"https://www.Dev.com\",\n            \"Facebook\": \"https://www.facebook.com/Dev\",\n            \"Twitter\": \"https://www.twitter.com/Dev\",\n            \"IsActive\": true,\n            \"Created_Date\": \"2020-05-03T00:00:00\",\n            \"Created_By\": \"Hardik\",\n            \"Updated_Date\": null,\n            \"Updated_By\": null\n        },\n        \"Category1\": {\n            \"ID\": 3,\n            \"Name\": \"Categories 3\",\n            \"Details\": \"size 51-100 m2\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add Room",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Super Delux\",\n    \"Category\": 2,\n    \"Price\": 2500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 1",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Super Delux\",\n    \"Category\": 2,\n    \"Price\": 2500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 2",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Prime Delux\",\n    \"Category\": 3,\n    \"Price\": 3500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 3",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 2,\n    \"Name\": \"Prime Delux\",\n    \"Category\": 3,\n    \"Price\": 3500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 4",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 2,\n    \"Name\": \"Super Delux\",\n    \"Category\": 2,\n    \"Price\": 2500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 5",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 2,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 6",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 3,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 7",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 3,\n    \"Name\": \"Super Delux\",\n    \"Category\": 2,\n    \"Price\": 2500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 8",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 3,\n    \"Name\": \"Super Delux\",\n    \"Category\": 3,\n    \"Price\": 3500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 9",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 4,\n    \"Name\": \"Super Delux\",\n    \"Category\": 3,\n    \"Price\": 3500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 10",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 4,\n    \"Name\": \"Super Delux\",\n    \"Category\": 2,\n    \"Price\": 2500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 11",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 4,\n    \"Name\": \"Super Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 12",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 5,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Room 13",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"HotelID\": 5,\n    \"Name\": \"Delux\",\n    \"Category\": 2,\n    \"Price\": 2500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Room/AddRoom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Room",
+						"AddRoom"
+					],
+					"query": [
+						{
+							"key": "hotelId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Room",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HotelID\": 1,\n    \"Name\": \"Delux\",\n    \"Category\": 1,\n    \"Price\": 1500,\n    \"IsActive\": true,\n    \"Created_By\": \"Hardik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44396/api/Room/AddRoom",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Room",
+								"AddRoom"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcUm9vbVxBZGRSb29t?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:34:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room details inserted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Room Availibility",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/api/Booking/GetAvailibility?roomId=1&date=2020-05-30",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Booking",
+						"GetAvailibility"
+					],
+					"query": [
+						{
+							"key": "roomId",
+							"value": "1"
+						},
+						{
+							"key": "date",
+							"value": "2020-05-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book Room",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"RoomID\" : 2,\n\t\"Booking_Date\" : \"2020-05-03\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Booking/Book",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Booking",
+						"Book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Booking Date",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ID\" : 2,\n\t\"Booking_Date\" : \"2020-05-03\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Booking/UpdateBooking",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Booking",
+						"UpdateBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Booking Status",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ID\" : 2,\n\t\"Status\" : \"Canceled\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44396/api/Booking/UpdateStatus",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Booking",
+						"UpdateStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Booking",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/api/Booking/Delete/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Booking",
+						"Delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hotels List",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "hardik",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "WebAPIKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/api/Hotel/Hotels",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"Hotel",
+						"Hotels"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Hotels List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44396/api/Hotel/Hotels",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44396",
+							"path": [
+								"api",
+								"Hotel",
+								"Hotels"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2518"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?QzpcVXNlcnNcSGFyZGlrXHNvdXJjZVxyZXBvc1xIb3RlbE1hbmFnZW1lbnRcSG90ZWxNYW5hZ2VtZW50LldlYkFQSVxhcGlcSG90ZWxcSG90ZWxz?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 May 2020 16:25:25 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 6,\n        \"Name\": \"Blue\",\n        \"Address\": \"NH 8\",\n        \"City\": \"Delhi\",\n        \"Pin_Code\": \"300855\",\n        \"Contact_Number\": \"9874563210\",\n        \"Contact_Person\": \"Hardik\",\n        \"Website\": \"https://www.Dev.com\",\n        \"Facebook\": \"https://www.facebook.com/Dev\",\n        \"Twitter\": \"https://www.twitter.com/Dev\",\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null\n    },\n    {\n        \"ID\": 1,\n        \"Name\": \"Dev\",\n        \"Address\": \"NH 8\",\n        \"City\": \"Vadodara\",\n        \"Pin_Code\": \"123456\",\n        \"Contact_Number\": \"9874563210\",\n        \"Contact_Person\": \"Hardik\",\n        \"Website\": \"https://www.Dev.com\",\n        \"Facebook\": \"https://www.facebook.com/Dev\",\n        \"Twitter\": \"https://www.twitter.com/Dev\",\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null\n    },\n    {\n        \"ID\": 3,\n        \"Name\": \"Dev\",\n        \"Address\": \"NH 8\",\n        \"City\": \"Mumbai\",\n        \"Pin_Code\": \"321456\",\n        \"Contact_Number\": \"9874563210\",\n        \"Contact_Person\": \"Hardik\",\n        \"Website\": \"https://www.Dev.com\",\n        \"Facebook\": \"https://www.facebook.com/Dev\",\n        \"Twitter\": \"https://www.twitter.com/Dev\",\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null\n    },\n    {\n        \"ID\": 4,\n        \"Name\": \"Dev\",\n        \"Address\": \"NH 8\",\n        \"City\": \"Vadodara\",\n        \"Pin_Code\": \"321456\",\n        \"Contact_Number\": \"9874563210\",\n        \"Contact_Person\": \"Hardik\",\n        \"Website\": \"https://www.Dev.com\",\n        \"Facebook\": \"https://www.facebook.com/Dev\",\n        \"Twitter\": \"https://www.twitter.com/Dev\",\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null\n    },\n    {\n        \"ID\": 7,\n        \"Name\": \"Greenland\",\n        \"Address\": \"NH 8\",\n        \"City\": \"Delhi\",\n        \"Pin_Code\": \"300855\",\n        \"Contact_Number\": \"9874563210\",\n        \"Contact_Person\": \"Hardik\",\n        \"Website\": \"https://www.Dev.com\",\n        \"Facebook\": \"https://www.facebook.com/Dev\",\n        \"Twitter\": \"https://www.twitter.com/Dev\",\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null\n    },\n    {\n        \"ID\": 5,\n        \"Name\": \"Paradise\",\n        \"Address\": \"NH 8\",\n        \"City\": \"Goa\",\n        \"Pin_Code\": \"365412\",\n        \"Contact_Number\": \"9874563210\",\n        \"Contact_Person\": \"Hardik\",\n        \"Website\": \"https://www.Dev.com\",\n        \"Facebook\": \"https://www.facebook.com/Dev\",\n        \"Twitter\": \"https://www.twitter.com/Dev\",\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null\n    },\n    {\n        \"ID\": 2,\n        \"Name\": \"Taj\",\n        \"Address\": \"NH 8\",\n        \"City\": \"Mumbai\",\n        \"Pin_Code\": \"321456\",\n        \"Contact_Number\": \"9874563210\",\n        \"Contact_Person\": \"Hardik\",\n        \"Website\": \"https://www.Dev.com\",\n        \"Facebook\": \"https://www.facebook.com/Dev\",\n        \"Twitter\": \"https://www.twitter.com/Dev\",\n        \"IsActive\": true,\n        \"Created_Date\": \"2020-05-03T00:00:00\",\n        \"Created_By\": \"Hardik\",\n        \"Updated_Date\": null,\n        \"Updated_By\": null\n    }\n]"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
